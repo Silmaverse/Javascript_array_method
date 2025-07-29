@@ -40,3 +40,24 @@ let admin=[9,10,11]
 
 let total = stu1.concat(teac1,admin);
 console.log(total);
+
+
+//map method
+let result = document.querySelector('.result');
+let partsArray = ['monitor', 'keyboard', 'cpu', 'notepad', 'cpu','gpu','cpu', 'ram'];
+partsArray.forEach((item) => {
+    result.innerHTML += item+'<br>';
+})
+//find method
+
+let finddata = partsArray.find((item) => {
+    return item == 'monitor'
+});
+result.innerHTML = finddata;
+
+
+//filter method
+let searchdata = partsArray.filter((item) => {
+   return item=='cpu'
+})
+result.innerHTML = searchdata;
